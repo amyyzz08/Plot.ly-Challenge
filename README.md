@@ -1,5 +1,5 @@
 # **Plotly Challenge: Belly Button Biodiversity**
-![](images/bacteria.jpg)
+![](images/image.png)
 
 # Background
 This challenge involves building an interactive dashboard to explore the Belly Button Biodiversity <a href="data/samples.json">dataset</a> which catalogs the microbes that colonise human navels.
@@ -31,4 +31,13 @@ The datasets reveals that a small handful of microbials specied (also known as o
 <br>
 
  **My Dashboard Below**
+<br>
+
+ **About the Data**
+
+ Hulcr, J. et al.(2012) _A Jungle in There: Bacteria in Belly Buttons are Highly Diverse, but Predictable_. Retrieved from: [http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/](http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/)
+
+- - -
+
+© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
  
