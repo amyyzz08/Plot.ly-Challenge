@@ -1,34 +1,37 @@
-// Use D3 Library to fetch the JSON data
-var dataset = "../data/samples.json"
 
-d3.json(dataset).then(function(json) {
-    // console.log(json)
+    // Use D3 Library to fetch the JSON data
+    d3.json("samples.json").then((data) => {
     
-    // Grab data from json objects to build plots
-    var sampleValue = json.samples.sample_values;
-    var otuID = json.samples.otu_ids;
-    var outLabels = json.samples.otu_labels;
+    // console.log(data);
 
-        // Horizontal bar chart to dispaly top 10 OUTs 
-        var trace = {
-        name: 
-        x: sampleValue,
-        y: otuID,
-        type: "bar",
-        orientation: "h"
-        };
+    // clear dropdown menu
+    d3.select("#selDataset").html("");
 
-        var bar_data = [trace];
+    // Iterating through array to select each individual ID and add to dropdown menu
+    data.metadata.forEach(row => {
 
-        var bar_layout = {
-        title: "Top 10 OTUs found",
-        xaxis: {title: "Sample Value"},
-        yaxis: {title: "OTU ID"}
-        };
+        var id = row.id
+        // console.log(id);
+        
+        // Appending all individual IDs to the dropdown menu
+        d3.select("#selDataset").append('option').attr('value',id).text(id);    
 
-    Plotly.newPlot("bar", bar_data, bar_layout);    
+        var selectedID = d3.select("#selDataset").node().value;
+
+        const arrayID = data.metadata.filter(row => (row.id == selectedID));
+        console.log(arrayID)
+    
+         // Appending info to panel
+        var panel = d3.select("#sample-metadata");
+        panel.html("");
+        Objects.entries(arrayID[0]).forEach(row=>{
+            panel.append("option").text(`${row[0]}: ${row[1]}`)
+        });
 
     });
-}
-buildPlot();
 
+
+
+
+
+})
