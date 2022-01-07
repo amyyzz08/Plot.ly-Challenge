@@ -21,17 +21,21 @@ The datasets reveals that a small handful of microbials specied (also known as o
     * Use <mark style="background-color: grey">sample_values</mark> for the y values.
     * Use <mark style="background-color: grey">otu_values</mark> for the marker size.
     * Use <mark style="background-color: grey">otu_ids</mark> for the marker colours.
-    * Use <mark style="background-color: grey">otu_labels</mark>for the text values.
+
 
 4. Display the sample metadata, i.e., an individual's demographic information.
 
-5. Display each key-value pair from the metadata JSON object somewhere on the page.
+5. Create a gauge chart to plot the weekly washing frequency of the selected indiviual. It will account for the values ranging from 0 through to 9.
 
 6. Update all of the plots any time that a new sample is selected.
 <br>
 
  **My Dashboard Below**
-<br>
+<hr>
+
+![](images/dashboard.png)
+
+![](images/bubble.png)
 
  **About the Data**
 
