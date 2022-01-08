@@ -36,7 +36,6 @@ function dropdown(selectedID) {
         var sampleValue = result.sample_values;
         var otuID = result.otu_ids;
         var labels = result.otu_labels;
-        var washfreq = 
 
         // Build Horizontal Bar Chart
         bar_trace = {
@@ -99,7 +98,6 @@ function dropdown(selectedID) {
             mode: "gauge+number",
             gauge: {
             axis: {range: [0,9]},
-            // bar: "black",
             steps: [
                 { range: [0, 1], color: "#7abaf2" },
                 { range: [1, 2], color: "#47c6f5" },
